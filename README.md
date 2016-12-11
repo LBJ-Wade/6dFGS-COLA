@@ -55,6 +55,9 @@ log10(M1/M_min) = 1.4,
 alpha = 1.5.
 
 
+WARNING: mock v0.3 does not match number density and 1-halo term for z < 0.05.
+
+
 ## Cosmology and simulation parameters
 
 Omega_m = 0.30
@@ -126,7 +129,12 @@ Parent catalogues are in real space and does not have redshift with RSD
 
 ## Miscellaneous
 
+- analysis/matter_power
+
+    Matter power spectrum of COLA particles (real space)
+
 - analysis/mass_function
 
     Mass funcion of COLA FoF haloes
 
+- 
