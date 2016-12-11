@@ -12,16 +12,19 @@ g2.hpc.swin.edu.au:/lustre/projects/p018_swin/jkoda/6dFGS-COLA/
 
 ## Mocks
 
+```
 mocks/v0.3/mocks    mock catalogue   (mask applied)
 mocks/v0.3/rands    random catalogue (with applied)
+```
 
 There are 1180 mocks, index  00001 - 01180.
 
 
 ### File format (ascii text file)
 
-Lins starting with # is a comment
+Lines starting with # is a comment
 
+```
 Column 1-3: x y z [1/h Mpc] comoving coordinate in redshift space
 Column 4:   vr    [km/s]    line-of-sight velocity
 Column 5:   redshift
@@ -29,7 +32,7 @@ Column 6:   redshift_dist   redshift without RSD
 Column 7:   M_200m [1/h M solar]  host halo mass
 Column 8:   r_sat [1/h Mpc] satelite galaxy displacement from halo center
 Column 9    vr_sat [km/s]   line-of-sight virial virial
-
+```
 
 ### HOD
 
@@ -44,32 +47,40 @@ nsat(M) = [(M - M_min)/M1]^alpha
 The halo mass is M_200m; the mean density within the halo is 200 times
 the mean matter density.
 
-
+```
 M_min(z) = 12.044819376747501 + 22.819438315305984 x +  110.43647374068253 x^2
            - 1435.652917667794 x^3 + 3679.37702426386 x^4,
+```
 
-where x = z - 0.05,
+where `x = z - 0.05`,
 
+```
 sigma = 0.5,
 log10(M1/M_min) = 1.4,
 alpha = 1.5.
-
+```
 
 WARNING: mock v0.3 does not match number density and 1-halo term for z < 0.05.
 
 
 ## Cosmology and simulation parameters
 
+```
 Omega_m = 0.30
 h       = 0.68
+```
 
 Linear power spectrum: analysis/camb_matterpower.dat
 
+```
 Simulation boxsize: 1200 [1/h Mpc] on a side
 N-body particle mass: m = 2.788529e+10
 Snapshot redshift:    z = 0.1
+```
 
 Other snapshots:
+
+```
 suffix redshift
 
 a 0.7
@@ -77,7 +88,7 @@ b 0.57
 c 0.32
 d 0.1
 e 0.0
-
+```
 
 
 ## Halo catalogues
@@ -85,9 +96,13 @@ e 0.0
 /lustre/projects/p018_swin/jkoda/work/6df_fit/halo_lightcone rand_lightcone
 
 Halo catalogue is created from FoF halo catalogue:
+```
     fof/
+```
 and subsampled particles,
+```
     particles/
+```
 
 COLA halo mass: `M >= 3.0e12`
 
@@ -96,7 +111,7 @@ function by matching the abundance n(>M).
 
 Particle halo:  `6.0e11 <= M < 3.0e12`
 
-`Fake` haloes are added to the halo catalogue from subsampled N-body
+*Fake* haloes are added to the halo catalogue from subsampled N-body
 particles, given a mass according to the same Tinker (2010) mass
 function. The lower limit of this type of halo is given by the number
 of the particle data.
