@@ -137,4 +137,10 @@ Parent catalogues are in real space and does not have redshift with RSD
 
     Mass funcion of COLA FoF haloes
 
-- 
+- mocks/v0.3/analysis/nbar_parent
+
+    Number density of the mock nbar(z)
+
+- mocks/v0.3/analysis/corr_projected
+
+    Projected correlation function of the mock (no weights)

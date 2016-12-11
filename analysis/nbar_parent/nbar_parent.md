@@ -26,3 +26,17 @@ Neglect line 1: `Serial mode`
 
 Column 1: z
 Column 2: nbar(z)
+
+## nbar data
+
+Target nbar(z) is:
+
+```
+nbar(z) = 1.415179*2.94123282e-02*exp(-2.34906602e+01*z  -3.52187066e+02*z^2
+          + 1.00558482e+03*z**3)
+```
+
+which means, the HOD paramter M_min(z) is adusted to give this number
+density. The result, however, is not exactly not this function due to
+lack of low mass halo for z < 0.05, and imperfect mass calibration for
+high mass (z > 0.15).
