@@ -60,9 +60,21 @@ alpha = 1.5.
 Omega_m = 0.30
 h       = 0.68
 
+Linear power spectrum: analysis/camb_matterpower.dat
+
 Simulation boxsize: 1200 [1/h Mpc] on a side
 N-body particle mass: m = 2.788529e+10
 Snapshot redshift:    z = 0.1
+
+Other snapshots:
+suffix redshift
+
+a 0.7
+b 0.57
+c 0.32
+d 0.1
+e 0.0
+
 
 
 ## Halo catalogues
@@ -110,4 +122,11 @@ parent_rands
 
 Parent catalogues are in real space and does not have redshift with RSD
 (column 5 in the masked catalgoue).
+
+
+## Miscellaneous
+
+- analysis/mass_function
+
+    Mass funcion of COLA FoF haloes
 
