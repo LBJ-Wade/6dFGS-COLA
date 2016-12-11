@@ -18,7 +18,7 @@ mocks/v0.3/rands    random catalogue (with applied)
 There are 1180 mocks, index  00001 - 01180.
 
 
-## File format (ascii text file)
+### File format (ascii text file)
 
 Lins starting with # is a comment
 
@@ -31,7 +31,7 @@ Column 8:   r_sat [1/h Mpc] satelite galaxy displacement from halo center
 Column 9    vr_sat [km/s]   line-of-sight virial virial
 
 
-## HOD
+### HOD
 
 The probabilty that a halo of mass M has a central galaxy:
 
@@ -45,14 +45,14 @@ The halo mass is M_200m; the mean density within the halo is 200 times
 the mean matter density.
 
 
-M_min(z) = 12.044819376747501 + 22.819438315305984*x +  110.43647374068253*x^2
-           - 1435.652917667794*x^3 + 3679.37702426386*x^4
+M_min(z) = 12.044819376747501 + 22.819438315305984 x +  110.43647374068253 x^2
+           - 1435.652917667794 x^3 + 3679.37702426386 x^4,
 
-where x = z - 0.05
+where x = z - 0.05,
 
-sigma = 0.5
-log10(M1/M_min) = 1.4
-alpha = 1.5
+sigma = 0.5,
+log10(M1/M_min) = 1.4,
+alpha = 1.5.
 
 
 ## Cosmology and simulation parameters
