@@ -25,7 +25,7 @@ Lins starting with # is a comment
 Column 1-3: x y z [1/h Mpc] comoving coordinate in redshift space
 Column 4:   vr    [km/s]    line-of-sight velocity
 Column 5:   redshift
-Column 6:   redshift_cosmo  redshift without RSD
+Column 6:   redshift_dist   redshift without RSD
 Column 7:   M_200m [1/h M solar]  host halo mass
 Column 8:   r_sat [1/h Mpc] satelite galaxy displacement from halo center
 Column 9    vr_sat [km/s]   line-of-sight virial virial
@@ -35,18 +35,18 @@ Column 9    vr_sat [km/s]   line-of-sight virial virial
 
 The probabilty that a halo of mass M has a central galaxy:
 
-<ncen(M)> = 1/2 { 1 + erf[ (log10 M - log10 M_min)/sigma] }
+ncen(M) = 1/2 { 1 + erf[ (log10 M - log10 M_min)/sigma] }
 
 The mean number of satellite galaxies if the halo has a central galaxy:
 
-<nsat(M)> = [(M - M_min)/M1]^alpha
+nsat(M) = [(M - M_min)/M1]^alpha
 
 The halo mass is M_200m; the mean density within the halo is 200 times
 the mean matter density.
 
 
 M_min(z) = 12.044819376747501 + 22.819438315305984*x +  110.43647374068253*x^2
-           - 1435.652917667794*x^3 + 3679.37702426386^4
+           - 1435.652917667794*x^3 + 3679.37702426386*x^4
 
 where x = z - 0.05
 
@@ -74,22 +74,22 @@ Halo catalogue is created from FoF halo catalogue:
 and subsampled particles,
     particles/
 
-COLA halo mass: M >= 3.0e12
+COLA halo mass: `M >= 3.0e12`
 
 The mass of COLA FoF haloes are remapped to Tinker (2010) mass
 function by matching the abundance n(>M).
 
-Particle halo:  6.0e11 <= M < 3.0e12
+Particle halo:  `6.0e11 <= M < 3.0e12`
 
 `Fake` haloes are added to the halo catalogue from subsampled N-body
 particles, given a mass according to the same Tinker (2010) mass
 function. The lower limit of this type of halo is given by the number
 of the particle data.
 
-Lightone n (1 <= n <= 590) and n + 590 are created from the simulation
+Lightone n (`1 <= n <= 590`) and n + 590 are created from the simulation
 box;
-1   -  590 are created from 0 <= x < 600
-591 - 1180 are created from 600 <= x < 1200.
+1   -  590 are created from `0 <= x < 600`
+591 - 1180 are created from `600 <= x < 1200`.
 
 See
 /lustre/projects/p018_swin/jkoda/work/6df_fit/data/fof
